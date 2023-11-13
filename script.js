@@ -79,6 +79,20 @@ function removeToDoItem(todoId) {
       todoItems.splice(i, 1);
     }
   }
+
+  try { 
+    if (todoItems.length === 0) {
+      throw "Error";
+    }
+  } 
+  catch (error) { 
+    console.log("Error: The array is empty");
+    
+  }
+  finally {
+    console.log(todoItems);
+  }
+
   // Implement the logic to add a task here
  console.log(todoItems);
   
@@ -111,7 +125,7 @@ function deleteToDoItem(todoId) {
       todoItems.splice(i, 1);
     }
   }
-
+ 
   console.log(todoItems);
   // Implement the logic to remove a task here
 
